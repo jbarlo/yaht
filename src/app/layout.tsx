@@ -3,7 +3,7 @@ export const metadata = {
   description: "",
 };
 
-// palette
+// palette - https://coolors.co/d64933-46237a-06d6a0-a960a3-ff9f1c
 // BF88BA (varying tones) - Interaction + bg
 // 46237A - Strong
 // D64933 - Danger
