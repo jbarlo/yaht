@@ -4,8 +4,8 @@ import { FC, useState } from "react";
 import styled from "styled-components";
 
 const colors = {
-  selected: { main: "purple", hovered: "red" },
-  unselected: { main: "blue", hovered: "green" },
+  selected: { main: "#06D6A0", hovered: "#A960A3" },
+  unselected: { main: "#CCA3C8", hovered: "#BF88BA" },
 };
 
 const size = 40;

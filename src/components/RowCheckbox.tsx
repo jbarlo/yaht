@@ -1,12 +1,12 @@
 "use client";
 
-import { FC, useState } from "react";
+import { FC } from "react";
 import styled from "styled-components";
 
 const colors = {
-  selected: "purple",
-  unselected: "blue",
-  full: "gold",
+  selected: "#06D6A0",
+  unselected: "#CCA3C8",
+  full: "#FF9F1C",
 };
 
 const size = 40;
