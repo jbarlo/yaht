@@ -22,7 +22,7 @@ const RowProps: FC<RowProps> = ({ initialChecks }: RowProps) => {
         gap: 40,
       }}
     >
-      <span style={{ display: "flex", gap: 8 }}>
+      <span style={{ display: "flex", gap: 8, height: 40 }}>
         {map(checks, (c, key: keyof typeof initialChecks) => (
           <Checkbox
             key={key}
