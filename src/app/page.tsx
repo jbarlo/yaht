@@ -32,6 +32,8 @@ const Mask = () => (
         width: "100%",
         top: "10vh",
         backgroundColor: "#E2CAE0",
+        maskImage:
+          "linear-gradient(#FFFF 0%, #FFF0 20%, #FFF0 80%, #FFFF 100%)",
         WebkitMaskImage:
           "linear-gradient(#FFFF 0%, #FFF0 20%, #FFF0 80%, #FFFF 100%)",
         pointerEvents: "none",
