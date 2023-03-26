@@ -1,4 +1,4 @@
-import { Row } from "@/components";
+import { Row, StyledComponentsRegistry } from "@/components";
 import { CHECKBOX } from "@/constants";
 import { map, range } from "lodash";
 
@@ -52,22 +52,24 @@ const Mask = () => (
 
 export default function Home() {
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        gap: CHECKBOX.gap,
-        // padding to manually center vertically so scroll works better with
-        // multiple rows
-        paddingTop: `calc(30vh - ${CHECKBOX.size}px / 2)`,
-        paddingBottom: `calc(30vh - ${CHECKBOX.size}px / 2)`,
-      }}
-    >
-      <Mask />
-      {map(range(52), (i) => (
-        <Row key={i} initialChecks={initialChecks} />
-      ))}
-    </div>
+    <StyledComponentsRegistry>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: CHECKBOX.gap,
+          // padding to manually center vertically so scroll works better with
+          // multiple rows
+          paddingTop: `calc(30vh - ${CHECKBOX.size}px / 2)`,
+          paddingBottom: `calc(30vh - ${CHECKBOX.size}px / 2)`,
+        }}
+      >
+        <Mask />
+        {map(range(52), (i) => (
+          <Row key={i} initialChecks={initialChecks} />
+        ))}
+      </div>
+    </StyledComponentsRegistry>
   );
 }
