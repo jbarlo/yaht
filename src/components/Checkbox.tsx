@@ -9,16 +9,17 @@ const colors = {
   unselected: { main: "#CCA3C8", hovered: "#BF88BA" },
 };
 
-const StyledDiv = styled.div<{
+const StyledButton = styled.button<{
   isSelected: boolean;
 }>`
   & {
+    border: 0px;
     width: ${CHECKBOX.size}px;
     height: ${CHECKBOX.size}px;
     border-radius: 6px;
     transition: ease background-color 0.2s,
-      cubic-bezier(0.26, -6, 0.66, 12) height 1s,
-      cubic-bezier(0.26, -8, 0.66, 6) width 1s;
+      cubic-bezier(0.26, 0, 0.66, 1) height 1s,
+      cubic-bezier(0.26, 0, 0.66, 1) width 1s;
     background-color: ${(props) =>
       props.isSelected ? colors.selected.main : colors.unselected.main};
     :hover {
@@ -42,6 +43,6 @@ const Checkbox: FC<CheckboxProps> = ({
   isSelected = false,
   onChange,
 }: CheckboxProps) => (
-  <StyledDiv isSelected={isSelected} onClick={() => onChange?.()} />
+  <StyledButton isSelected={isSelected} onClick={() => onChange?.()} />
 );
 export default Checkbox;
