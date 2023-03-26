@@ -30,6 +30,7 @@ const StyledDiv = styled.div<{
       width: ${CHECKBOX.clickedSize}px;
       height: ${CHECKBOX.clickedSize}px;
     }
+    cursor: pointer;
   }
 `;
 
