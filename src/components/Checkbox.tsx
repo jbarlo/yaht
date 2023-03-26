@@ -1,6 +1,7 @@
 "use client";
 
-import { FC, useState } from "react";
+import { CHECKBOX } from "@/constants";
+import { FC } from "react";
 import styled from "styled-components";
 
 const colors = {
@@ -8,14 +9,12 @@ const colors = {
   unselected: { main: "#CCA3C8", hovered: "#BF88BA" },
 };
 
-const size = 40;
-const clickedSize = 38;
 const StyledDiv = styled.div<{
   isSelected: boolean;
 }>`
   & {
-    width: ${size}px;
-    height: ${size}px;
+    width: ${CHECKBOX.size}px;
+    height: ${CHECKBOX.size}px;
     border-radius: 6px;
     transition: ease background-color 0.2s,
       cubic-bezier(0.26, -6, 0.66, 12) height 1s,
@@ -27,9 +26,9 @@ const StyledDiv = styled.div<{
         props.isSelected ? colors.selected.hovered : colors.unselected.hovered};
     }
     :active {
-      margin: ${size - clickedSize}px;
-      width: ${clickedSize}px;
-      height: ${clickedSize}px;
+      margin: ${CHECKBOX.size - CHECKBOX.clickedSize}px;
+      width: ${CHECKBOX.clickedSize}px;
+      height: ${CHECKBOX.clickedSize}px;
     }
   }
 `;

@@ -1,5 +1,6 @@
 "use client";
 
+import { CHECKBOX } from "@/constants";
 import { FC } from "react";
 import styled from "styled-components";
 
@@ -9,13 +10,12 @@ const colors = {
   full: "#FF9F1C",
 };
 
-const size = 40;
 const StyledDiv = styled.div<{
   state: keyof typeof colors;
 }>`
   & {
-    width: ${size}px;
-    height: ${size}px;
+    width: ${CHECKBOX.size}px;
+    height: ${CHECKBOX.size}px;
     border-radius: 6px;
     transition: ease background-color 0.2s;
     background-color: ${(props) => colors[props.state]};

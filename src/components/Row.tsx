@@ -1,4 +1,5 @@
 "use client";
+import { CHECKBOX } from "@/constants";
 import { every, map, some } from "lodash";
 import { FC, useState } from "react";
 import Checkbox from "./Checkbox";
@@ -13,16 +14,10 @@ const RowProps: FC<RowProps> = ({ initialChecks }: RowProps) => {
   if (some(checks, (c) => c)) totalState = "selected";
   if (every(checks, (c) => c)) totalState = "full";
   return (
-    <div
-      style={{
-        height: "100%",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        gap: 40,
-      }}
-    >
-      <span style={{ display: "flex", gap: 8, height: 40 }}>
+    <div style={{ display: "flex", gap: 40 }}>
+      <span
+        style={{ display: "flex", gap: CHECKBOX.gap, height: CHECKBOX.size }}
+      >
         {map(checks, (c, key: keyof typeof initialChecks) => (
           <Checkbox
             key={key}
